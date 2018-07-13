@@ -1,0 +1,80 @@
+Michal Rostecki <mrostecki@suse.com>
+Michal Rostecki <mrostecki@suse.de>
+
+# getmountinfo is heavily based on the previously existing mountinfo parser
+# implementations in Cilium, Kubernetes and Moby/Docker. Here are the lists of
+# people who contributed to those implementations.
+
+# Authors of mountinfo parser in Cilium
+
+Michal Rostecki <mrostecki@suse.com>
+
+# Authors of mountinfo parser in Kubernetes
+
+Alexander Block <ablock84@gmail.com>
+Alexander Staubo <alex@purefiction.net>
+andrewsykim <kim.andrewsy@gmail.com>
+andyzhangx <xiazhang@microsoft.com>
+Brendan Burns <bburns@google.com>
+Cindy Wang <ciwang@google.com>
+David McMahon <djmm@google.com>
+deads2k <deads@redhat.com>
+Deyuan Deng <deyuan@google.com>
+Di Xu <stephenhsu90@gmail.com>
+Dong Liu <doliu@microsoft.com>
+Eric Paris <eparis@redhat.com>
+Harry Zhang <harryz@hyper.sh>
+Hemant Kumar <hekumar@redhat.com>
+Huamin Chen <hchen@redhat.com>
+Ian Chakeres <ian.chakeres@gmail.com>
+Jan Safranek <jsafrane@redhat.com>
+jianglingxia <jiang.lingxia@zte.com.cn>
+Jing Xu <jinxu@google.com>
+Jordan Liggitt <jliggitt@redhat.com>
+Kubernetes Submit Queue <k8s-merge-robot@users.noreply.github.com>
+laushinka <laurie.malau@gmail.com>
+markturansky <mturansk@redhat.com>
+Matthew Wong <mawong@redhat.com>
+Michael Taufen <mtaufen@google.com>
+Michelle Au <msau@google.com>
+mlmhl <malinbupt@gmail.com>
+Morgan Bauer <mbauer@us.ibm.com>
+Paul Morie <pmorie@gmail.com>
+Pengfei Ni <feiskyer@gmail.com>
+Russ Cox <rsc@golang.org>
+saadali <saadali@google.com>
+Sami Wagiaalla <swagiaal@redhat.com>
+Scott Creeley <screeley@redhat.com>
+Serguei Bezverkhi <sbezverk@cisco.com>
+Tim Hockin <thockin@google.com>
+Tobias Klauser <tklauser@distanz.ch>
+Vishnu kannan <vishnuk@google.com>
+Vishnu Kannan <vishnuk@google.com>
+xiazhang <xiazhang@microsoft.com>
+Yecheng Fu <fuyecheng@qiniu.com>
+ymqytw <mengqiy@google.com>
+yue9944882 <291271447@qq.com>
+zhangxiaoyu-zidif <zhang.xiaoyu33@zte.com.cn>
+
+# Authors of mountinfo parser in Moby/Docker
+
+Aleksa Sarai <asarai@suse.com>
+Amit Krishnan <amit.krishnan@oracle.com>
+Antonio Murdaca <runcom@linux.com>
+Brian Goff <cpuguy83@gmail.com>
+Daniel Nephin <dnephin@docker.com>
+Guillaume Dufour <gdufour.prestataire@voyages-sncf.com>
+Jamie Hannaford <jamie.hannaford@rackspace.com>
+John Howard <jhoward@microsoft.com>
+Kato Kazuyoshi <kato.kazuyoshi@gmail.com>
+Kenfe-Mickael Laventure <mickael.laventure@gmail.com>
+Kir Kolyshkin <kolyshkin@gmail.com>
+Michael Crosby <crosby.michael@gmail.com>
+Paul Nasrat <pnasrat@gmail.com>
+Peter Bourgon <peter@bourgon.org>
+Peter Waller <peter@scraperwiki.com>
+Sebastiaan van Stijn <github@gone.nl>
+unclejack <unclejack@users.noreply.github.com>
+Vincent Batts <vbatts@redhat.com>
+Vincent Demeester <vincent@sbr.pm>
+Yong Tang <yong.tang.github@outlook.com>
