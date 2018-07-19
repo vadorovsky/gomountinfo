@@ -1,6 +1,6 @@
 #authorslist#
 
-# getmountinfo is heavily based on the previously existing mountinfo parser
+# gomountinfo is heavily based on the previously existing mountinfo parser
 # implementations in Cilium, Kubernetes and Moby/Docker. Here are the lists of
 # people who contributed to those implementations.
 
