@@ -22,7 +22,8 @@ import (
 )
 
 const (
-	mountInfoFilepath = "/proc/self/mountinfo"
+	mountInfoFilepath    = "/proc/self/mountinfo"
+	mountInfoPidFilepath = "/proc/%d/mountinfo"
 )
 
 func parseInfoFile(r io.Reader, filter FilterFunc) ([]*MountInfo, error) {
@@ -130,6 +131,18 @@ func ParseMountTable(filter FilterFunc) ([]*MountInfo, error) {
 	f, err := os.Open(mountInfoFilepath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open mount info file %s: %v", mountInfoFilepath, err)
+	}
+	defer f.Close()
+
+	return parseInfoFile(f, filter)
+}
+
+func ParseMountTablePid(pid int, filter FilterFunc) ([]*MountInfo, error) {
+	mFilepath := fmt.Sprintf(mountInfoPidFilepath, pid)
+
+	f, err := os.Open(mFilepath)
+	if err != nil {
+		return nil, fmt.Errorf("failed to open mount info file %s: %v", mFilepath, err)
 	}
 	defer f.Close()
 
