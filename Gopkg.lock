@@ -19,6 +19,12 @@
   version = "v0.8.0"
 
 [[projects]]
+  name = "github.com/spf13/pflag"
+  packages = ["."]
+  revision = "583c0c0531f06d5278b7d917446061adc344b5cd"
+  version = "v1.0.1"
+
+[[projects]]
   name = "gotest.tools"
   packages = [
     "assert",
@@ -33,6 +39,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "6b64e4bc4b327df1602a94152634cfd4cf4c4b56cd1260f7c0a813eabd242a2f"
+  inputs-digest = "0b3ef7ee53035645ec7259a071a6736b3d0faa8efe39e315cacb50c1de84d5d8"
   solver-name = "gps-cdcl"
   solver-version = 1
