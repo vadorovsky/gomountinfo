@@ -17,6 +17,8 @@ import (
 	"os"
 	"text/tabwriter"
 
+	flag "github.com/spf13/pflag"
+
 	"github.com/mrostecki/gomountinfo"
 )
 
@@ -34,6 +36,15 @@ const (
 	titleSuperOptions   = "Super options"
 )
 
+var (
+	pid int
+)
+
+func init() {
+	flag.IntVarP(&pid, "pid", "p", -1, "PID of the process to get mountinfo from")
+	flag.Parse()
+}
+
 func main() {
 	w := tabwriter.NewWriter(os.Stdout, 5, 0, 3, ' ', 0)
 
@@ -44,7 +55,13 @@ func main() {
 		titleFilesystemType, titleMountSource, titleSuperOptions,
 	)
 
-	mountInfos, err := gomountinfo.ParseMountTable(nil)
+	var mountInfos []*gomountinfo.MountInfo
+	var err error
+	if pid > 0 {
+		mountInfos, err = gomountinfo.ParseMountTablePid(pid, nil)
+	} else {
+		mountInfos, err = gomountinfo.ParseMountTable(nil)
+	}
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to get mount info: %v", err)
 		os.Exit(1)
