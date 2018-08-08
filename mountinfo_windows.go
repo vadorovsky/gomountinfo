@@ -12,7 +12,7 @@
 
 package gomountinfo
 
-func ParseMountTable(f FilterFunc) ([]*Info, error) {
+func ParseMountTable(f FilterFunc) ([]*MountInfo, error) {
 	// Do NOT return an error!
 	return nil, nil
 }
