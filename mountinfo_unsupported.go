@@ -19,6 +19,6 @@ import (
 	"runtime"
 )
 
-func parseMountTable(f FilterFunc) ([]*Info, error) {
-	return nil, fmt.Errorf("mount.parseMountTable is not implemented on %s/%s", runtime.GOOS, runtime.GOARCH)
+func ParseMountTable(f FilterFunc) ([]*MountInfo, error) {
+	return nil, fmt.Errorf("mount.ParseMountTable is not implemented on %s/%s", runtime.GOOS, runtime.GOARCH)
 }
