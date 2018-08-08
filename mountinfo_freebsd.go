@@ -66,3 +66,7 @@ func ParseMountTable(filter FilterFunc) ([]*MountInfo, error) {
 	}
 	return out, nil
 }
+
+func ParseMountTablePid(pid int, f FilterFunc) ([]*MountInfo, error) {
+	return nil, fmt.Errorf("gomountinfo.ParseMountTablePid is not implemented on FreeBSD/%s", runtime.GOARCH)
+}
