@@ -16,3 +16,8 @@ func ParseMountTable(f FilterFunc) ([]*MountInfo, error) {
 	// Do NOT return an error!
 	return nil, nil
 }
+
+func ParseMountTablePid(pid int, f FilterFunc) ([]*MountInfo, error) {
+	// Do NOT return an error!
+	return nil, nil
+}
