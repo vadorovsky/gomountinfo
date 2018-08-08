@@ -27,7 +27,7 @@ import (
 
 // Parse /proc/self/mountinfo because comparing Dev and ino does not work from
 // bind mounts.
-func parseMountTable(filter FilterFunc) ([]*MountInfo, error) {
+func ParseMountTable(filter FilterFunc) ([]*MountInfo, error) {
 	var rawEntries *C.struct_statfs
 
 	count := int(C.getmntinfo(&rawEntries, C.MNT_WAIT))
