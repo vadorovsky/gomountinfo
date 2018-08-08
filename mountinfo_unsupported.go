@@ -22,3 +22,7 @@ import (
 func ParseMountTable(f FilterFunc) ([]*MountInfo, error) {
 	return nil, fmt.Errorf("mount.ParseMountTable is not implemented on %s/%s", runtime.GOOS, runtime.GOARCH)
 }
+
+func ParseMountTablePid(pid int, f FilterFunc) ([]*MountInfo, error) {
+	return nil, fmt.Errorf("mount.ParseMountTablePid is not implemented on %s/%s", runtime.GOOS, runtime.GOARCH)
+}
