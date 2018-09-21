@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mrostecki/gomountinfo.svg?branch=master)](https://travis-ci.org/mrostecki/gomountinfo)
 
-Go library for parsing information from /proc/self/mountinfo
+Go library for parsing information from /proc/pid/mountinfo
 
 ## Motivation
 
