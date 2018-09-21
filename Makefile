@@ -7,7 +7,7 @@ check:
 	go test -cover -v ./...
 
 example:
-	go build -o ./example/example ./example
+	go build -o ./out/example ./example
 
 gen-authors:
 	out="`git log --pretty=format:'%aN <%aE>' | sort -u`" && \
