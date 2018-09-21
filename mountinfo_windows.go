@@ -12,11 +12,15 @@
 
 package gomountinfo
 
+// ParseMountTable parses the mount info available for the current process.
+// Not implemented for Windows!
 func ParseMountTable(f FilterFunc) ([]*MountInfo, error) {
 	// Do NOT return an error!
 	return nil, nil
 }
 
+// ParseMountTablePid parses the mount info available for the given process
+// Not implemented for Windows!
 func ParseMountTablePid(pid int, f FilterFunc) ([]*MountInfo, error) {
 	// Do NOT return an error!
 	return nil, nil

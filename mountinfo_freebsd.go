@@ -25,8 +25,9 @@ import (
 	"unsafe"
 )
 
-// Parse /proc/self/mountinfo because comparing Dev and ino does not work from
-// bind mounts.
+// ParseMountTable parses the mount info available for the current process.
+// This implementation parses /proc/self/mountinfo, because comparing Dev and
+// ino does not work from bind mounts.
 func ParseMountTable(filter FilterFunc) ([]*MountInfo, error) {
 	var rawEntries *C.struct_statfs
 
@@ -67,6 +68,8 @@ func ParseMountTable(filter FilterFunc) ([]*MountInfo, error) {
 	return out, nil
 }
 
+// ParseMountTablePid parses the mount info available for the given process.
+// Not implemented for FreeBSD!
 func ParseMountTablePid(pid int, f FilterFunc) ([]*MountInfo, error) {
 	return nil, fmt.Errorf("gomountinfo.ParseMountTablePid is not implemented on FreeBSD/%s", runtime.GOARCH)
 }

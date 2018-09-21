@@ -127,6 +127,7 @@ func parseInfoFile(r io.Reader, filter FilterFunc) ([]*MountInfo, error) {
 	return result, nil
 }
 
+// ParseMountTable parses the mount info available for the current process.
 func ParseMountTable(filter FilterFunc) ([]*MountInfo, error) {
 	f, err := os.Open(mountInfoFilepath)
 	if err != nil {
@@ -137,6 +138,7 @@ func ParseMountTable(filter FilterFunc) ([]*MountInfo, error) {
 	return parseInfoFile(f, filter)
 }
 
+// ParseMountTablePid parses the mount info available for the given process.
 func ParseMountTablePid(pid int, filter FilterFunc) ([]*MountInfo, error) {
 	mFilepath := fmt.Sprintf(mountInfoPidFilepath, pid)
 
