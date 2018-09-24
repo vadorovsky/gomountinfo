@@ -85,6 +85,8 @@ func parseInfoFile(r io.Reader, filter FilterFunc) ([]*MountInfo, error) {
 			return nil, fmt.Errorf("failed to parse minor: %v", err)
 		}
 
+		mountOptions := strings.Split(mountInfoLeft[5], ",")
+
 		// Extract optional fields, which start from 7th position
 		var optionalFields []string
 		for i := 6; i < len(mountInfoLeft); i++ {
@@ -101,7 +103,7 @@ func parseInfoFile(r io.Reader, filter FilterFunc) ([]*MountInfo, error) {
 			Minor:          minor,
 			Root:           mountInfoLeft[3],
 			MountPoint:     mountInfoLeft[4],
-			MountOptions:   mountInfoLeft[5],
+			MountOptions:   mountOptions,
 			OptionalFields: optionalFields,
 			FilesystemType: mountInfoRight[0],
 			MountSource:    mountInfoRight[1],

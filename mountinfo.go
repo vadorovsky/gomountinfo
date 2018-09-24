@@ -12,6 +12,19 @@
 
 package gomountinfo
 
+import (
+	"strings"
+)
+
+// MountOptions is a list of mount options.
+type MountOptions []string
+
+// String returns mount options in form of string with coma separator, in the
+// same format as in /proc/pid/mountinfo.
+func (m MountOptions) String() string {
+	return strings.Join(m, ",")
+}
+
 // MountInfo is a struct representing information from /proc/pid/mountinfo in
 // Linux. It has the following syntax:
 //
@@ -41,7 +54,7 @@ type MountInfo struct {
 	Minor          int
 	Root           string
 	MountPoint     string
-	MountOptions   string
+	MountOptions   MountOptions
 	OptionalFields []string
 	FilesystemType string
 	MountSource    string

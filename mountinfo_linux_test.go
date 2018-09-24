@@ -478,7 +478,7 @@ func TestParseFedoraMountinfoFields(t *testing.T) {
 		Minor:          3,
 		Root:           "/",
 		MountPoint:     "/proc",
-		MountOptions:   "rw,nosuid,nodev,noexec,relatime",
+		MountOptions:   []string{"rw", "nosuid", "nodev", "noexec", "relatime"},
 		OptionalFields: []string{"shared:5"},
 		FilesystemType: "proc",
 		MountSource:    "proc",
